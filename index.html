@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Project 78</title>
+</head>
+
+<body>
+    <h2>My Family</h2>
+    <img id="person_img" src="https://i.gifer.com/7RQk.gif">
+    <h4 id="name_label">Start</h4>
+    <button type="button" id="next_btn" onclick="change_name()">Start</button>
+    <script>
+        var names = ["Aaditya Sonawane", "My Mom and Dad", "Majhi Aajji"];
+        var images = ["My Photo.png", "IMG-20200221-WA0001.jpg", "IMG_0149.JPG"]
+        var array_value = "0";
+        function change_name() {
+            document.getElementById("name_label").innerHTML = names[array_value];
+            document.getElementById("person_img").src = images[array_value];
+            if (array_value == 2) {
+                array_value = 0;
+            }
+            array_value++
+        }
+
+    </script>
+    <style>
+        body {
+            text-align: center;
+        }
+        #person_img {
+            height: 500;
+            width: 500;
+        }
+    </style>
+</body>
+
+</html>
